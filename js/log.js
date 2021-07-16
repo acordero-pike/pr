@@ -1,7 +1,7 @@
 let prearray = []
 
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const formulario = document.querySelector('#formulario');
 formulario.addEventListener('submit', validar);
 })
