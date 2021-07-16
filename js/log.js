@@ -3,7 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const formulario = document.querySelector('#formulario');
-formulario.addEventListener('click', consultarAPI);
+formulario.addEventListener('submit', consultarAPI);
 })
 
 function consultarAPI() {
