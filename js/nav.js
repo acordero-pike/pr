@@ -48,7 +48,7 @@ let nombre ="";
 
 
 
-window.load(href, function(){
+window.load( function(){
  navbars()
 })
 
