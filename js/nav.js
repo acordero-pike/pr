@@ -47,9 +47,7 @@ let nombre ="";
 }
 
 
+ window.onload =  navbars();
 
-window.load( 
- navbars();
-)
 
 
