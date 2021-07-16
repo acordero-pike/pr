@@ -3,7 +3,7 @@ let nombre ="";
 
 
  
-document.addEventListener('load', () => {
+ function navbars()  {
     prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
    
     
@@ -46,5 +46,10 @@ document.addEventListener('load', () => {
 
 })
 
+
+
+contentLoaded.load(href, function(){
+ navbars()
+})
 
 
