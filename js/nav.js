@@ -50,6 +50,6 @@ let nombre ="";
 
 window.load( 
  navbars();
-}
+)
 
 
