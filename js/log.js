@@ -9,6 +9,7 @@ formulario.addEventListener('click', consultarAPI);
 function consultarAPI() {
 const us = document.querySelector("#user");
 const con = document.querySelector("#cont");
+  console.log(con.value);
 
 let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
