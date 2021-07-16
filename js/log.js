@@ -33,7 +33,7 @@ fetch(url)
         } else  {
            const { 0: id} = resultado;  
  
-        prearray= id ;
+        prearray= [id] ;
         sincronizarStorage();
           window.location.href="../Vistas/index.html"
          
@@ -41,6 +41,7 @@ fetch(url)
       } )
       .catch(error => {
         console.log(error)
+        return;
       });
 
 }
@@ -60,6 +61,7 @@ function validar()
   }
   else{
     consultarAPI()
+    return;
   }
 
 
