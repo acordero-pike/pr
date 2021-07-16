@@ -15,15 +15,15 @@ let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
 fetch(url)
       .then(respuesta => {
-        console.log(respuesta);
-      })
-      .then(datos => {
        
       
-        if(datos.status === "400") {
-            console.log('Ciudad No Encontrada')
-        } else {
-            console.log(datos)
+      
+       
+      
+        if(respuesta.status === "400") {
+            console.log('Acceso incorrecto')
+        } else if(respuesta.status==="200") {
+            console.log(respuesta);
         }
       })
       .catch(error => {
