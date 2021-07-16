@@ -15,12 +15,12 @@ let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
 fetch(url)
       .then(respuesta => {
-        return respuesta.json();
+        console.log(respuesta);
       })
       .then(datos => {
        
       
-        if(datos.cod === "404") {
+        if(datos.status === "400") {
             console.log('Ciudad No Encontrada')
         } else {
             console.log(datos)
