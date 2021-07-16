@@ -2,8 +2,7 @@ let prearray = [];
 let nombre ="";
 
 
- 
- function navbars()  {
+document.addEventListener('DOMContentLoaded', () => {
     prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
    
     
@@ -33,7 +32,7 @@ let nombre ="";
 
 
 }else{
-    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="../pr/Login.html">Login </a>
+    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="../Login.html">Login </a>
     <a class="nav-link"  style="color:white ;"   href="#">singup </a>`;
 }
 
@@ -44,8 +43,7 @@ let nombre ="";
 
 
 
-}
+})
 
- 
 
 
