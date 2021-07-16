@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
- 
+   <script src="js/nav.js"></script>
     <title>Cursos</title>
 
  
@@ -35,67 +35,35 @@
 
     
   </head>
-  <script>
-    $(function(){
-    $("#nav-placeholder").load("../pr/header.html");
-    });
-  
-    let prearray = [];
-let nombre ="";
-
-
  
- function navbars()  {
-    prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
-   
-    
-
-    if (prearray.length >0)
-{
-
-   prearray.forEach( ar =>  {  nombre =ar.nombre})
-
-    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="#">${nombre}</a>
-    <a class="nav-link"  style="color:white ;" id="logoff" >LogOff</a>`;
-    const logoff = document.querySelector("#logoff") ;
-    logoff.addEventListener('click', () => {
-
-        const conf = confirm("Desea Salir de su Cuenta?");
-        if (conf)
-        {
-    localStorage.removeItem('Llave');
-    location.reload();
-        }
-        else{
-    
-        }
-    
-    })
-
-
-
-}else{
-    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="../pr/Login.html">Login </a>
-    <a class="nav-link"  style="color:white ;"   href="#">singup </a>`;
-}
-
-
-
-
-
-
-
-
-}
-
- 
-
-
-
-    
-    </script>
   <body>
-    <header id="nav-placeholder" onload="navbars()"></header>
+    <header id="nav-placeholder" onload="navbars()">
+      <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lerning2teach</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">acerca de </a>
+            </li>
+          </ul>
+          <div class="navbar-nav" id="logg">
+     
+        </div>
+      </div>
+      </div>
+    </nav>
+    </header>
 
 <main>
 
