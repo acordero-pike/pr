@@ -2,7 +2,7 @@ let prearray = [];
 let nombre ="";
 
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
    
     
