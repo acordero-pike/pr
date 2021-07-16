@@ -46,8 +46,7 @@ let nombre ="";
 
 }
 
-
- window.onload =  navbars();
+ window.attachEvent("onload",navbars);
 
 
 
