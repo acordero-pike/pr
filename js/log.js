@@ -1,35 +1,70 @@
-
+let prearray = []
 
 
 document.addEventListener('DOMContentLoaded', () => {
   const formulario = document.querySelector('#formulario');
-formulario.addEventListener('click', consultarAPI);
+formulario.addEventListener('submit', validar);
 })
 
 function consultarAPI() {
 const us = document.querySelector("#user");
 const con = document.querySelector("#cont");
-  console.log(con.value);
+ 
 
 let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
 fetch(url)
-      .then(respuesta => {
-       const {status} = respuesta;
+      .then(respuesta => respuesta.json()
       
-        console.log(respuesta);
-        console.log(status);
-       
       
-        if(status === 400) {
-            console.log('Acceso incorrecto')
-        } else if(status===200) {
-          window.location.href="../pr/index.html"
-            console.log(respuesta);
+      
+      ).then(resultado => {
+ 
+      const {status} = resultado;
+      console.log(status)
+      
+   
+        if(status === "400") {
+           document.querySelector('#error').innerHTML='Acceso incorrecto Usuario o contraseña no Validos';
+           setTimeout(() => {
+            document.querySelector('#error').innerHTML=""
+           },3000)
+           return;
+        } else  {
+           const { 0: id} = resultado;  
+ 
+        prearray= id ;
+        sincronizarStorage();
+          window.location.href="../Vistas/index.html"
+         
         }
-      })
+      } )
       .catch(error => {
         console.log(error)
       });
 
+}
+function validar()
+{
+  const us = document.querySelector("#user");
+  const con = document.querySelector("#cont");
+
+  if (us.value=='' || con.value=="")
+  {
+    document.querySelector('#error').innerHTML='Ambos Campos son necesarios ';
+    
+    setTimeout(() => {
+      document.querySelector('#error').innerHTML=""
+     },3000)
+     return;
+  }
+  else{
+    consultarAPI()
+  }
+
+
+}
+
+function sincronizarStorage() {
+  localStorage.setItem('Llave', JSON.stringify(prearray));
 }
