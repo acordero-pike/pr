@@ -46,7 +46,6 @@ let nombre ="";
 
 }
 
- window.attachEvent("onload",navbars);
-
+ 
 
 
