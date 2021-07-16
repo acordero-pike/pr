@@ -15,14 +15,16 @@ let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
 fetch(url)
       .then(respuesta => {
+       const {status} = respuesta;
+      
+        console.log(respuesta);
+        console.log(status);
        
       
-      
-       
-      
-        if(respuesta.status === "400") {
+        if(status === 400) {
             console.log('Acceso incorrecto')
-        } else if(respuesta.status==="200") {
+        } else if(status===200) {
+          window.location.href="../pr/index.html"
             console.log(respuesta);
         }
       })
@@ -31,5 +33,3 @@ fetch(url)
       });
 
 }
-
-
