@@ -10,7 +10,7 @@ function consultarAPI() {
 const us = document.querySelector("#user");
 const con = document.querySelector("#cont");
 
-let url = `https://localhost:5001/api/Usuarios/${us}${con}`;
+let url = `https://localhost:5001/api/Usuarios/${us.value},${con.value}`;
 
 fetch(url)
       .then(respuesta => {
