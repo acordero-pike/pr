@@ -48,8 +48,8 @@ let nombre ="";
 
 
 
-window.load( function(){
- navbars()
-})
+window.load( 
+ navbars();
+}
 
 
