@@ -58,15 +58,16 @@ const deleteCurso = (index) => {
 
 // con los datos de la empresa creamos una linda tarjetita para mostrar su información
 const insertCursoIntoDom = (curso, index) => {
+  console.log(curso.idCurso);
   const card = `
     <div class="card col-4 mx-1">
           <div class="card-body">
-            <h5 class="card-title">${curso.nombre}</h5>
-            <h5 class="card-title">Q.${curso.idCurso}</h5>
-            <h5 class="card-title">Q.${curso.descripcion}</h5>
-            <h5 class="card-title">Q.${curso.costo}</h5>
-            <h5 class="card-title">${curso.idinstructor}</h5>
-            <h5 class="card-title">${curso.duracion}</h5>
+            <h5 class="card-title">Nombre: ${curso.nombre}</h5>
+            <h5 class="card-title">Id Curso:${curso.idCurso}</h5>
+            <h5 class="card-title">Descripcion: ${curso.descripcion}</h5>
+            <h5 class="card-title"> Costo: Q.${curso.costo}</h5>
+            <h5 class="card-title">Instructor :${curso.idInstructor}</h5>
+            <h5 class="card-title">Duracion: ${curso.duracion} hrs</h5>
             
             <button onclick="openModalEdit(${index})" class="btn btn-primary"> Editar </button>
             <button onclick="deleteEmpresa(${index})" class="btn btn-danger"> Eliminar </button>
