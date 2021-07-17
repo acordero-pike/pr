@@ -1,7 +1,7 @@
 
 
 
-document.addEventListener('onload', () => {
+document.addEventListener('load', () => {
     prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
    
     
