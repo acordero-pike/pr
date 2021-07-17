@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 }else{
-    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="../Login.html">Login </a>
+    document.querySelector("#logg").innerHTML=` <a class="nav-link"  style="color:white ;" href="../pages/Login.html">Login </a>
     <a class="nav-link"  style="color:white ;"   href="../pages/userRegister.html">singup </a>`;
 }
 
