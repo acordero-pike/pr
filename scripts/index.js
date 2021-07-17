@@ -23,7 +23,7 @@ console.log(curso);
   nombre.value = curso.nombre;
   descripcion.value = curso.descripcion;
   costo.value = curso.costo;
-  instructor.value = curso.instructor;
+  idinstructor.value = curso. idinstructo;
   duracion.value = curso.duracion;
 };
 
@@ -65,7 +65,7 @@ const insertCursoIntoDom = (curso, index) => {
             <h5 class="card-title">Q.${curso.idCurso}</h5>
             <h5 class="card-title">Q.${curso.descripcion}</h5>
             <h5 class="card-title">Q.${curso.costo}</h5>
-            <h5 class="card-title">${curso.instructor}</h5>
+            <h5 class="card-title">${curso.idinstructor}</h5>
             <h5 class="card-title">${curso.duracion}</h5>
             
             <button onclick="openModalEdit(${index})" class="btn btn-primary"> Editar </button>
@@ -87,14 +87,14 @@ const setCursos = async () => {
 
 // obtenemos los valores del input y los formateamos a json
 getFormData = () => {
-  const { nombre, descripcion, costo, instructor, duracion } =
+  const { nombre, descripcion, costo, idinstructor, duracion } =
     form.elements;
   
   return {
     nombre: nombre.value,
     descripcion: descripcion.value,
     costo: costo.value,
-    instructor: instructor.value,
+    idinstructor: idinstructor.value,
     duracion: duracion.value,
   };
 };
