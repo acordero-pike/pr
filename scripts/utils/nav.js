@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    prearray.forEach( ar =>  {  nombre =ar.nombre})
 
-    document.querySelector("#logg").innerHTML=`<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+    document.querySelector("#nav-placeholder").innerHTML=`<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Lerning2teach</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,6 +96,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
-
-
-
