@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
  window.location.href="../pages/index.html";
 }else{
-    window.location.href="../pages/Home.html";
+   
 }
 })
    
