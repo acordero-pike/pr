@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="collapse navbar-collapse" id="navbarsExample02">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../pages/index.html"  >Home</a>
+              <a class="nav-link active" aria-current="page" href="../pages/Inicio.html"  >Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/cursos.html">Cursos</a>
+              <a class="nav-link" href="../pages/Home.html">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">acerca de </a>
