@@ -35,7 +35,7 @@ fetch(url)
  
         prearray= [id] ;
         sincronizarStorage();
-          window.location.href="../pr/index.html"
+          window.location.href="../pages/index.html"
          
         }
       } )
