@@ -15,7 +15,7 @@ h4 {
     font-weight: 700;
 }
 header {
-   
+    padding: 20px 0 0 0;
     background: white;
     text-align: center;
 }
@@ -180,3 +180,77 @@ display: block;
 margin-bottom: 10px;
 text-decoration: none;
 }
+
+
+.slide2 {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .slide2 ul {
+        display: flex;
+        padding: 0;
+        width: 600%;
+        animation: cambio2 60s infinite;
+    }
+
+    .slide2 li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .slide2 img {
+        width: 100%;
+    }
+
+
+@keyframes cambio2 {
+    0% {
+        margin-left: 0;
+    }
+
+    15% {
+        margin-left: 0;
+    }
+
+    17% {
+        margin-left: -100%;
+    }
+
+    31% {
+        margin-left: -100%;
+    }
+
+    33% {
+        margin-left: -200%;
+    }
+
+    47% {
+        margin-left: -200%;
+    }
+
+    49% {
+        margin-left: -300%;
+    }
+
+    63% {
+        margin-left: -300%;
+    }
+
+    66% {
+        margin-left: -400%;
+    }
+
+    81% {
+        margin-left: -400%;
+    }
+
+    84% {
+        margin-left: -500%;
+    }
+
+    100% {
+        margin-left: -500%;
+    }
+} 
