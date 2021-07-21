@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 {
 
 }else{
-    window.location.href="../pages/Index.html";
+    window.location.href="../pages/index.html";
 }
 })
