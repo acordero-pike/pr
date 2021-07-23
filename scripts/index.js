@@ -17,13 +17,13 @@ let cursos = [];
 
 // seteamos los valores de un objeto empresa en los inputs del formulario
 const setCursosValuesToForm = (curso) => {
-  const { nombre, descripcion, costo, idInstructor, duracion } =
+  const { nombre, descripcion, costo, idinstructor, duracion } =
     form.elements;
 console.log(curso);
   nombre.value = curso.nombre;
   descripcion.value = curso.descripcion;
   costo.value = curso.costo;
-  idinstructor.value = curso.idInstructor;
+  idinstructor.value = curso.idinstructor;
   duracion.value = curso.duracion;
 };
 
