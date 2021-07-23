@@ -23,7 +23,7 @@ console.log(curso);
   nombre.value = curso.nombre;
   descripcion.value = curso.descripcion;
   costo.value = curso.costo;
-  idinstructor.value = curso.idinstructor;
+  idinstructor.value = curso.idInstructor;
   duracion.value = curso.duracion;
 };
 
