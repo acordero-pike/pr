@@ -17,7 +17,7 @@ let cursos = [];
 
 // seteamos los valores de un objeto empresa en los inputs del formulario
 const setCursosValuesToForm = (curso) => {
-  const { nombre, descripcion, costo, instructor, duracion } =
+  const { nombre, descripcion, costo, idInstructor, duracion } =
     form.elements;
 console.log(curso);
   nombre.value = curso.nombre;
