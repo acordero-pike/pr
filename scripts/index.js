@@ -66,7 +66,9 @@ const insertCursoIntoDom = (curso, index) => {
   console.log(curso.idCurso);
   const card = `
     <div class="card col-4 mx-1">
-          <div class="card-body">
+          <div class="card-body" style="
+    text-align: center;
+">
             <h5 class="card-title">Nombre: ${curso.nombre}</h5>
             <h5 class="card-title">Id Curso:${curso.idCurso}</h5>
             <h5 class="card-title">Descripcion: ${curso.descripcion}</h5>
