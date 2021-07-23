@@ -1,6 +1,7 @@
 // ----- elements
 
 // obtenemos los elementos de htmls mediante un id
+let prearray = [];
 const cardListElement = document.getElementById("cardList");
 const modalButton = document.getElementById("modalButton");
 const submitButton = document.getElementById("submitButton");
@@ -36,7 +37,18 @@ const openModalEdit = (index) => {
 
 // abrimos el modal en modo de guardado
 const openModalAdd = () => {
+  let id="";
+    prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
+    prearray.forEach( ar =>  {  id =ar.id})
   currentCurso = null;
+   const { nombre, descripcion, costo, idinstructor, duracion } =
+    form.elements;
+console.log(curso);
+  nombre.value = "";
+  descripcion.value = "";
+  costo.value = "";
+  idinstructor.value = id;
+  duracion.value = "";
   modalButton.click();
 };
 
