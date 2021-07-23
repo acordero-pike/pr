@@ -1,6 +1,11 @@
 html {
     font-size: 62.5%;
 }
+.col-4 {
+    flex: 0 0 auto;
+    width: 30%;
+}
+
 body {
     background-color: #f5f3f3
 }
