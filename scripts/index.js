@@ -43,7 +43,7 @@ const openModalAdd = () => {
   currentCurso = null;
    const { nombre, descripcion, costo, idinstructor, duracion } =
     form.elements;
-console.log(curso);
+
   nombre.value = "";
   descripcion.value = "";
   costo.value = "";
