@@ -26,14 +26,14 @@ console.log(curso);
   nombre.value = curso.nombre;
   descripcion.value = curso.descripcion;
   costo.value = curso.costo;
-  idinstructor.value = curso.idinstructor;
+  idinstructor.value = id;
   duracion.value = curso.duracion;
 };
 
 // abrimos el modal en modo de edición
 const openModalEdit = (index) => {
   currentCurso = cursos[index];
-  currentCurso.idIsntructor=id
+   
   setCursosValuesToForm(currentCurso);
   modalButton.click();
 };
