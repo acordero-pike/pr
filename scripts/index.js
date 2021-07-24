@@ -1,7 +1,5 @@
 // ----- elements
- let id="";
-   
-    prearray.forEach( ar =>  {  id =ar.id})
+ 
 // obtenemos los elementos de htmls mediante un id
 
 const cardListElement = document.getElementById("cardList");
@@ -40,7 +38,9 @@ const openModalEdit = (index) => {
 
 // abrimos el modal en modo de guardado
 const openModalAdd = () => {
- 
+ let id="";
+   
+    prearray.forEach( ar =>  {  id =ar.id})
   currentCurso = null;
    const { nombre, descripcion, costo, idinstructor, duracion } =
     form.elements;
