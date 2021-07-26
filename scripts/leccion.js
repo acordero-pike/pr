@@ -5,7 +5,7 @@ const headers = {
   };
   const LeccionService = {
     getLecciones(curso) {
-      return fetch(url+${idcurs}, {
+      return fetch(url+${curso}, {
         method: "GET",
       }).then((response) => response.json());
     },
