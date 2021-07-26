@@ -3,7 +3,8 @@ const modalButton = document.getElementById("modalButton");
 const submitButton = document.getElementById("submitButton");
 const closeModalButton = document.getElementById("closeModalButton");
 const form = document.getElementById("form");
-
+ const parametrosURL = new URLSearchParams(window.location.search);
+   const idcurs = parseInt( parametrosURL.get('id') );
 
 let currentLeccion = null;
 let lecciones = [];
@@ -17,7 +18,7 @@ titulo.value = leccionn.titulo;
 descripcion.value = leccionn.descripcion;
 duracion.value = leccionn.duracion;
 enlaceVideo.value = leccionn.enlaceVideo;
-idCurso.value = leccionn.idCurso;
+idCurso.value = idcurs;
 };
 
 
@@ -31,6 +32,11 @@ const openModalEdit = (index) => {
 
 const openModalAdd = () => {
   currentLeccion = null;
+  titulo.value = "";
+descripcion.value ="";
+duracion.value = "";
+enlaceVideo.value = "";
+idCurso.value = "";
   modalButton.click();
 };
 
