@@ -1,11 +1,11 @@
-const url = "https://localhost:5001/api/Leccion"
+const url = "https://localhost:5001/api/Leccion/"
 const headers = {
     'Accept' : "application/json",
     "Content-Type": "application/json",
   };
   const LeccionService = {
-    getLecciones() {
-      return fetch(url, {
+    getLecciones(curso) {
+      return fetch(url+${idcurs}, {
         method: "GET",
       }).then((response) => response.json());
     },
