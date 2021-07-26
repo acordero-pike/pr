@@ -94,7 +94,7 @@ const insertCursoIntoDom = (curso, index) => {
 // hacemos nuevo request con las empresas y las renderizamos
 const setCursos = async () => {
   cardListElement.innerHTML = "";
-  const dataCurso = await CursoService.getCursos();
+  const dataCurso = await CursoService.getCursos(idcurs);
   cursos = dataCurso;
   cursos.forEach((curso, index) => insertCursoIntoDom(curso, index));
 };
