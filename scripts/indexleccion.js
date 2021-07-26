@@ -38,7 +38,7 @@ const openModalAdd = () => {
 descripcion.value ="";
 duracion.value = "";
 enlaceVideo.value = "";
-idCurso.value = "";
+idCurso.value = idcurs;
   modalButton.click();
 };
 
