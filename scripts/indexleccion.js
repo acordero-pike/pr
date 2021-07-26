@@ -73,7 +73,7 @@ const insertLeccionIntoDom = (lecc, index) => {
 
 const setLecciones = async () => {
   cardListElement.innerHTML = "";
-  const dataLeccion = await LeccionService.getLecciones();
+  const dataLeccion = await LeccionService.getLecciones(idcurs);
   lecciones = dataLeccion;
   lecciones.forEach((leccion, index) => insertLeccionIntoDom(leccion, index));
 };
