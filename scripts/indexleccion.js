@@ -32,6 +32,8 @@ const openModalEdit = (index) => {
 
 const openModalAdd = () => {
   currentLeccion = null;
+ const { titulo, descripcion, duracion, enlaceVideo, idCurso } =
+    form.elements;
   titulo.value = "";
 descripcion.value ="";
 duracion.value = "";
