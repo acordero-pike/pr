@@ -2,9 +2,11 @@ const headers = {
   'Accept' : "application/json",
   "Content-Type": "application/json",
 };
+let id = null;
+ prearray.forEach( ar =>  {  id =ar.id})
 const CursoService = {
   getCursos() {
-    return fetch(URL, {
+    return fetch(URL+'/'+id, {
       method: "GET",
     }).then((response) => response.json());
   },
