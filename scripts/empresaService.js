@@ -3,6 +3,9 @@ const headers = {
   "Content-Type": "application/json",
 };
 let id = null;
+ prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
+   
+    
  prearray.forEach( ar =>  {  id =ar.id})
 const CursoService = {
   getCursos() {
