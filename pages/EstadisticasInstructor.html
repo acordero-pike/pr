@@ -18,9 +18,8 @@
     <meta name="generator" content="Hugo 0.84.0">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
    <script src="../scripts/utils/nav.js"></script>
-   <script src="../scripts/AdminController/permisosadm.js"></script>
-     <script src="../scripts/AdminController/cursos.js" ></script>
-     
+   <script src="../scripts/instructorcontroller/permisosinstr.js"></script>
+      <script src="../scripts/instructorcontroller/crs.js"></script>
       <link href="../css/styles.css" rel="stylesheet" />
     <title>Listado de Estudiantes</title>
   </head>
@@ -54,31 +53,37 @@
     </nav>
     </header> 
 
-    <h2 class="text-3xl font-light text-center">Listado de Cursos</h2>
+
+    <h2 class="text-3xl font-light text-center">Cursos</h2>
 
     <div>
              <table id="tabla" class="min-w-full">
                 <thead class="bg-gray-100 ">
                     <tr>
-<th colspan="3"> Datos del Curso</th>
-
-                    </tr>
-                    <tr>
-                    
                         <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                            Nombre 
+                            Nombre
                         </th>
                         <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                                Duracion
+                                Description
+                        </th>
+                        
+                        <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                            Estudiantes Inscritos
                         </th>
                         <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-                                Instrucctor
+                            Precio Por Curso 
                         </th>
-                      
+                        <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                            Ganancias
+                        </th>
                     </tr>
                 </thead>
                 <tbody id="listado-clientes" class="bg-white"></tbody>
             </table>
           </div>
+         
+</main>
+</div>
+
 </body>
 </html>

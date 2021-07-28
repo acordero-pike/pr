@@ -76,7 +76,7 @@ const insertCursoIntoDom = (curso, index) => {
             <h5 class="card-title">Nombre: ${curso.nombre}</h5>
             <h5 class="card-title">Id Curso:${curso.idCurso}</h5>
             <h5 class="card-title">Descripcion: ${curso.descripcion}</h5>
-            <h5 class="card-title"> Costo: Q.${curso.costo}</h5>
+            <h5 class="card-title"> Costo: Q.${curso.costo/1.2}</h5>
             <h5 class="card-title">Instructor :${curso.idInstructor}</h5>
             <h5 class="card-title">Duracion: ${curso.duracion} hrs</h5>
             
@@ -96,6 +96,10 @@ const setCursos = async () => {
   cardListElement.innerHTML = "";
   const dataCurso = await CursoService.getCursos();
   cursos = dataCurso;
+  if(cursos.length<1)
+  {
+    cardListElement.innerHTML='No ha ingresao ningun curso , Igrese uno para listar'
+  }
   cursos.forEach((curso, index) => insertCursoIntoDom(curso, index));
 };
 

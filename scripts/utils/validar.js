@@ -6,12 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
    
     
 
-    if (prearray.length >0)
-{
- window.location.href="../pages/index.html";
-}else{
-   
-}
 })
    
 
