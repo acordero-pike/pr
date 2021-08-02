@@ -41,6 +41,8 @@ import StaticAlert from "../utils/staticAlert.js";
       instructorService.register(instructor)
         .then((response) => {
           alert("Instructor registrado");
+          window.location.href="../pages/cursos.html"
+
         })
         .catch((error) => alert(error.message));
     }

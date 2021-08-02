@@ -80,6 +80,8 @@ import StaticAlert from "../utils/staticAlert.js";
         usuarioServicio.updateUsuario(usuario)
         .then((response) => {
           alert(response);
+          window.location.href="../pages/index.html"
+
         })
         .catch((error) => alert(error.message));
 
@@ -90,6 +92,7 @@ import StaticAlert from "../utils/staticAlert.js";
       usuarioServicio.deleteUsuario(idUsu)
       .then((response) => {
         alert(response);
+        window.location.href="../pages/index.html"
       })
       .catch((error) => alert(error.message));
     }

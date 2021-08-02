@@ -37,6 +37,8 @@ import StaticAlert from "../utils/staticAlert.js";
       estudianteService.register(estudiante)
         .then((response) => {
           alert("Estudiante registrado");
+          window.location.href="../pages/index.html"
+
         })
         .catch((error) => alert(error.message));
     }
