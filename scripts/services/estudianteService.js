@@ -1,6 +1,6 @@
 const requestUrl = `${URL}/estudiantes`
 
-prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
+let prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
 prearray.forEach( ar =>  {  token =ar.token})
 
   const myHeaders = new Headers();
