@@ -166,7 +166,7 @@ if (Rol=="Instructor")
   {
     eliminarlocal()
   }
-  location.reload();
+ window.location.href="../pages/Home.html"
       }
       else{
   
