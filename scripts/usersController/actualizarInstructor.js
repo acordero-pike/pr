@@ -59,7 +59,7 @@ import StaticAlert from "../utils/staticAlert.js";
         estudios: estudiosI.value,
         certificacion: certificacionI.value,
         experienciaLab: experienciaLabI.value,
-        cuentaBancaria: certificacionI.value,
+        cuentaBancaria: cuentaBancariaI.value,
      }
 
      const usuario = {
