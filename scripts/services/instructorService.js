@@ -1,16 +1,24 @@
 const requestUrl = `${URL}/instructores`
 
+prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
+prearray.forEach( ar =>  {  token =ar.token})
+
+  const myHeaders = new Headers();
+
+myHeaders.append('Authorization', `Bearer ${token}  `);
+myHeaders.append('Content-Type', 'application/json');  
 const instructorService = {
   getInstructores(idInstructor) {
     return fetch(`${requestUrl}/${idInstructor}`, {
       method: "GET",
+  
     }).then((response) => response.json(),
     console.log(response));
   },
   deleteInstructor(idInstructor) {
     return fetch(requestUrl, {
       method: "DELETE",
-      headers,
+      headers:myHeaders,
       body: JSON.stringify({idInstructor: idInstructor})
     }).then((response) => response.json());
   },
@@ -18,7 +26,7 @@ const instructorService = {
     console.info(body);
     return fetch(requestUrl, {
       method: "PUT",
-      headers,
+      headers:myHeaders,
       body: JSON.stringify(body),
     }).then((response) => response.json());
   },
