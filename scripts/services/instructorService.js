@@ -1,6 +1,6 @@
 const requestUrl = `${URL}/instructores`
-let token=null;
-let prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
+
+prearray = JSON.parse( localStorage.getItem('Llave') ) || []  ;
 prearray.forEach( ar =>  {  token =ar.token})
 
   const myHeaders = new Headers();
@@ -12,15 +12,40 @@ const instructorService = {
     return fetch(`${requestUrl}/${idInstructor}`, {
       method: "GET",
   
-    }).then((response) => response.json(),
-    console.log(response));
+    }).then(response => {
+      
+      if( !response.ok ){
+  
+          catchError( response );
+  
+      } else {
+  
+       return response.json();
+  
+      }
+  
+  }).catch( catchError )
+
   },
   deleteInstructor(idInstructor) {
     return fetch(requestUrl, {
       method: "DELETE",
       headers:myHeaders,
       body: JSON.stringify({idInstructor: idInstructor})
-    }).then((response) => response.json());
+    }).then(response => {
+      
+      if( !response.ok ){
+  
+          catchError( response );
+  
+      } else {
+  
+       return response.json();
+  
+      }
+  
+  }).catch( catchError )
+
   },
   updateInstructor(body) {
     console.info(body);
@@ -28,14 +53,40 @@ const instructorService = {
       method: "PUT",
       headers:myHeaders,
       body: JSON.stringify(body),
-    }).then((response) => response.json());
+    }).then(response => {
+      
+      if( !response.ok ){
+  
+          catchError( response );
+  
+      } else {
+  
+       return response.json();
+  
+      }
+  
+  }).catch( catchError )
+
   },
   register(body) {
     return fetch(requestUrl, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
-    });
+    }).then(response => {
+      
+      if( !response.ok ){
+  
+          catchError( response );
+  
+      } else {
+  
+       return response.json();
+  
+      }
+  
+  }).catch( catchError )
+
   },
 };
 
@@ -52,3 +103,21 @@ const instructorService = {
 }
 
 export default instructorService;
+
+
+function catchError( error ,msj){
+
+  console.log( error.status );
+   
+  if (msj==null && error.status==401)
+  {
+      msj="Algo Salio Mal... ,No tiene permitido el uso de este Recurso";
+  }
+  else if(msj==null)
+  {
+     msj="Algo Salio Mal...";
+  }
+//   
+window.location.href=`error.html?id=${msj}`;
+
+}

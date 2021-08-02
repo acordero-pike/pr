@@ -96,7 +96,8 @@ import StaticAlert from "../utils/staticAlert.js";
       usuarioServicio.deleteUsuario(idUsu)
       .then((response) => {
         alert(response);
-        window.location.href="../pages/cursos.html"
+        localStorage.removeItem('Llave');
+        window.location.href="../pages/Home.html"
       })
       .catch((error) => alert(error.message));
     }
