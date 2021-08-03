@@ -55,10 +55,10 @@ const insertLeccionIntoDom = (lecc, index) => {
   const card = `
     <div class="card col-4 mx-1">
           <div class="card-body">
-            <h5 class="card-title">Id Leccion: ${lecc.idLeccion}</h5>
+            <h5 class="card-title" hideen>Id Leccion: ${lecc.idLeccion}</h5>
             <h5 class="card-title">Titulo:${lecc.titulo}</h5>
             <h5 class="card-title">Descripcion: ${lecc.descripcion}</h5>
-            <h5 class="card-title"> Duración:${lecc.duracion}</h5>
+            <h5 class="card-title"> Duración:${lecc.duracion} minutos</h5>
             <h5 class="card-title">Enlace:${lecc.enlaceVideo}</h5>
             <h5 class="card-title" hidden>Id Curso: ${lecc.idCurso} hrs</h5>
             
