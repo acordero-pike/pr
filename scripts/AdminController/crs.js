@@ -52,7 +52,7 @@ const obtenerestudiantes = async () => {
                 </td>
                
                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5">
-                <a href="inscritos.html?id=${idCurso}" class="text-teal-600 hover:text-teal-900 mr-5"><button  >Ver Alumnos</button></a>
+                <a href="Inscritos.html?id=${idCurso}" class="text-teal-600 hover:text-teal-900 mr-5"><button  >Ver Alumnos</button></a>
                 </td>
             `;
 
